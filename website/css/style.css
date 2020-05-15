@@ -1,0 +1,191 @@
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  counter-reset: figures;
+}
+
+iframe{
+  margin:auto;
+  display:block;
+  padding-bottom:1rem;
+}
+
+figure {
+  counter-increment: figures;
+  border-radius:0.25rem;
+  padding: 1rem;
+  padding-bottom:1.5rem;
+}
+
+figure figcaption:before {
+  content: 'Figure ' counter(figures) '. ';
+}
+
+table {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td {
+  text-align: left;
+}
+
+nav a:hover{
+  background-color:rgba(146, 214, 227, 0.2);
+}
+nav .icon-link:hover{
+  background-color:rgba(146, 214, 227, 0);
+
+}
+
+.table {
+  background-color:white;
+  text-align:center;
+  max-width:900px;
+  border-radius: 0.25rem;
+}
+
+.navigation ul {
+  text-align:left;
+  display:flex;
+  justify-content: space-around;
+  width: 100%
+}
+
+.img-border{
+  border:1px solid black;
+}
+
+.navbar{
+  z-index:100;
+  width:100%;  
+}
+.sticky{
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+.icon{
+	width:20%;
+	height:20%;
+}
+.bg {
+  /* The image used */
+  background-image: url("../img/cover.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.fig-cont{
+  text-align:center;
+}
+
+.title{
+	font-weight: bold;
+  color: #113d74;
+}
+
+.subtitle{
+ font-style:italic; 
+ font-weight: bold;
+}
+
+.subsubtitle{
+ font-style:italic; 
+ font-weight: bold;
+ padding-left:0.75rem;
+ padding-bottom:1rem;
+}
+.subsubsection{
+ margin-left:1rem;
+ padding-left:1rem;
+ border-left: 3px solid #113d7475;
+
+}
+
+.content{
+  margin-left:5%;
+}
+
+.underline {
+  border-bottom: 2px solid currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
+.even{
+	background-color:white;
+}
+
+.odd{
+	background-color:#F0F0F0;
+}
+
+.section{
+	padding-top: 6%;
+  padding:3%;
+  padding-right:5%;
+  padding-left:5%;
+}
+
+.smaller-img{
+  max-width:400px;
+  max-height:auto;
+}
+
+.right-img{
+  margin-left:0.5rem;
+}
+
+.left-img{
+  margin-right:0.5rem;
+}
+
+.figure-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.people{
+  text-align:center;
+  margin:auto;
+  display:flex;
+}
+
+.portrait-container{
+  margin:0 auto;
+  width:50%;
+}
+
+.portrait{
+  border-radius:50%;
+  max-width: 250px;
+  opacity: 1;
+  width:100%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.portrait-text{
+  font-size: 16px;
+  padding: 16px 32px;
+  padding-top:5px;
+  font-weight:bold;
+}
+
+.portrait-text a {
+  color:black;
+}
+
+a:hover {
+  color:#007bff70;
+}
