@@ -71,7 +71,6 @@
 
   <div id="sec2" class="section even">
     <h3 class="title">Introduction</h3><br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/m7m12iCukg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p class="text">
       The project consists of two main components: the graphical user interface (GUI) and the computer vision (CV) logic.    The GUI develops the canvas for users to create their drawing. Using PyQt5, the canvas is developed to allow users to draw, erase, reset the page/create a new canvas, save the canvas image, change the pen color, and change the pen size. The GUI is separated into the canvas view and toolbar view. These two views are swapped between each other so that the user can focus on solely drawing or changing canvas settings. The display can be seen in fig. 1. The CV logic shows a window that detects the user’s hands. The window is shown for users to easily reference the location of their hands and whether it is within the camera frame. OpenCV is used to detect the location and gestures of the hands and this data is then sent to the GUI. The CV logic window can be seen in fig. 2.
     </p>
@@ -729,7 +728,7 @@
     <div class="fig-cont">
       <figure class="figure">
       <img src="img/htop_terminal.jpg"
-         class="img-border right-img smaller-img figure-img img-fluid rounded" alt="Boxing box">
+         class="img-border right-img smaller-img figure-img img-fluid rounded" alt="htop">
       <figcaption class="figure-caption"><code>htop</code></figcaption>
       </figure>
     </div>

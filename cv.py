@@ -345,9 +345,6 @@ rect = [(40, 40), (600, 360)]
 
 
 def main(pipe_object):
-    # cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-    # cam.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
-    # cam.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cam = WebcamVideoStream(src=0).start()
     global pipe
     pipe = pipe_object
