@@ -130,7 +130,7 @@ class MainWindow(QtWidgets.QMainWindow):
         """
         Deletes the canvas and resets it to a blank white screen.
         """
-        canvas = QtGui.QPixmap(WIDTH, HEIGHT)
+        canvas = QtGui.QPixmap(WIDTH, HEIGHT-self.icon_size)
         canvas.fill(Qt.white)
         self.canvas = canvas
         self.canvas_label.setPixmap(canvas)
