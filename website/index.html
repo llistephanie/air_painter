@@ -439,12 +439,18 @@
       to draw on the canvas in later steps. The preset distance was
       determined by testing different distances and determining how far the
       finger had to be extended for it to consider the hand as holding up 1
-      finger. We adjusted this distance to our liking. While this is not implemented in the finalized code, we investigated adjusting this preset distance
-      dynamically depending on how much of the arm is in the image. The
+      finger. We adjusted this distance to our liking. We investigated
+      adjusting this preset distance
+      dynamically depending on how much of the arm is in the image.  The
       more of the arm is in the image, the further the centroid goes down the
       arm as the arm is included in the contour. Consequently, the distance to
       differentiate between 0 and 1 finger needs to be larger when our hand
-      is near the top of the screen than when near the bottom. Fig 15.
+      is near the top of the screen than when near the bottom. In our
+      investigation, we found that the way we adjust this distance differed
+      depending on the camera's resolution. Rather than dealing with this
+      extra complexity, we decided to stick with our original approach of
+      setting an adjustable pre-set distance as its much easier to adjust
+      when changing resolution. Fig 15.
       shows the system recognizing 0 and 1 finger.
     </p>
     <div class="fig-cont">
@@ -810,7 +816,7 @@
       <a target="_blank" href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a>,
       <a target="_blank" href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a>, and
       <a target="_blank" href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a>. 
-      To create the color wheel, the <a href="https://stackoverflow.com/questions/50720719/how-to-create-a-color-circle-in-pyqt"> StackOverflow </a> post is referenced. For the website, we referenced <a href="https://getbootstrap.com/"> Bootstrap </a> examples.
+      To create the color wheel, the <a target="_blank" href="https://stackoverflow.com/questions/50720719/how-to-create-a-color-circle-in-pyqt"> StackOverflow </a> post is referenced. For the website, we referenced <a href="https://getbootstrap.com/"> Bootstrap </a> examples.
     </p>
     <p class="text">
       To create the GUI, we researched various methods for hand detection. We looked into a
