@@ -723,6 +723,16 @@
       <figcaption class="figure-caption">Gesture commands <br></figcaption>
       </figure>
     </div>
+    <p = class="text">
+      Fig. 21 below shows the CPU utilization of our final program on the Pi through the <code>htop</code> command. As we can see, <code>main.py</code> takes up 66.1% of a CPU. The 4 processes highlighted in green correspond to the canvas process, the thread for the canvas that receives data from the Pipe, the CV pipeline process, and the thread that polls the camera. Even though 2 of these are processes and 2 of these are threads, we see that from the perspective of htop, they each get their own PID (1201, 1202, 1203, and 1204). Each of these 4 processes/threads only use 8% of the CPU. The total CPU utilization of our CPU is about 100% which roughly corresponds to full utilization of a single core. Much of the processing required for the canvas and CV pipeline is inherently sequential which is why we see rather low CPU utilization even with multiprocessing and multithreading. This implies that the speed of our program is primarily affected by the CPU clock speed. We tested this by running our program on a desktop and found that the responsiveness of the program improved which seems to confirm our hypothesis. 
+    </p>
+    <div class="fig-cont">
+      <figure class="figure">
+      <img src="img/htop_terminal.jpg"
+         class="img-border right-img smaller-img figure-img img-fluid rounded" alt="Boxing box">
+      <figcaption class="figure-caption"><code>htop</code></figcaption>
+      </figure>
+    </div>
     <h6 class="subtitle">Testing</h6>
     <p class="text">
       To test the full system, we went through all the states in fig. 20 and ensured that they worked properly on the Pi system. We checked that the hand gestures mapped to the correct functionality on the GUI through visual inspection. The testing of individual features for the CV component and GUI have also been tested as noted in previous sections. For the integration, we ensure that the user can use the system end-to-end from setting the background to drawing and manipulating the canvas through hand gestures.
